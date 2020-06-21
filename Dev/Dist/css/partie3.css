@@ -1,0 +1,25 @@
+.resultat{
+    margin-left: 5%;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.output{
+    margin-left: 5%;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.print{
+    float: right;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid blueviolet;
+    background-color: blueviolet;
+    margin-right: 10%;
+    margin-top: 10%;
+    color: white;
+    font-weight: bold;
+}
