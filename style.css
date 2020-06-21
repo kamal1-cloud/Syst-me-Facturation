@@ -1,5 +1,5 @@
-.logo{
-    height: 80px; 
+.logo {
+    height: 80px;
     width: 80px;
     border: 2px solid black;
     float: right;
@@ -10,64 +10,76 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.logo p{
-  color: rgb(52, 121, 231);
-  padding-top: 20px;
-  padding-left: -20px;
-  padding-right: 12px;
-  font-size: 15px;
+
+.logo p {
+    color: rgb(52, 121, 231);
+    padding-top: 20px;
+    padding-left: -20px;
+    padding-right: 12px;
+    font-size: 15px;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.factur{
-    height: 37px; 
+
+.factur {
+    height: 37px;
     width: 220px;
     border: 1px solid rgb(52, 121, 231);
     border-radius: 20px;
 }
-.fct{
+
+.fct {
     padding-left: 17px;
     font-style: unset;
     color: black;
     font-size: 15px;
 }
-.dony{
+
+.dony {
     margin-top: -10px;
     margin-left: -100px;
 }
-div{
-    width : 50%;
+
+div {
+    width: 50%;
     margin: 50px auto;
-    }
-    input[type="text"],
-    select.form-control {
+}
+
+input[type="text"],
+select.cont {
     background: transparent;
     border: none;
     border-bottom: 0.5px solid #000000;
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 0;
-    }
-    input[type="text"]:focus,
-    select.form-control:focus {
+}
+
+input[type="text"]:focus,
+select.cont:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
-    }
-    .oto{
-      display: flex;
-      justify-content: space-around;
-    }
-    .oto label{
-      margin-top: 17px;
-      margin-right: 15px;
-    }
-    .oto2{
-        display: flex;
-        justify-content: space-around;
-        margin-top: -60px;
-    }
-    .oto2 label{
-        margin-top: 17px;
-        margin-right: 15px;
-     }
+}
+
+.oto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.oto label {
+    margin-top: 17px;
+    margin-right: 15px;
+}
+
+.oto2 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -60px;
+}
+
+.oto2 label {
+    margin-top: 17px;
+    margin-right: 15px;
+}
