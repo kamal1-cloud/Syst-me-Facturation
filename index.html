@@ -1,38 +1,141 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Dev/Dist/css/partie2.css">
+
     <title>Facture</title>
 </head>
+
 <body>
-    <div class="logo">
-      <a href=""><p>LOGO</p></a> 
+    <section class="header">
+
+
+        <div class="logo">
+            <a href="">
+                <p>LOGO</p>
+            </a>
+        </div>
+        <div class="factur">
+            <h5 class="fct">Facture: N°254320/06/2020</h5>
+        </div>
+        <div class="dony">
+            <div class="oto">
+                <label for="name" class="control-label">FULLNAME:</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="oto2">
+                <label for="name" class="control-label1">Adress:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="oto2">
+                <label for="name"
+                    class="control-label2">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="oto2">
+                <label for="name"
+                    class="control-label3">Tel:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+        </div>
+    </section>
+    <section class="main" id="main">
+
+        <form id="form1" class="" action="">
+            <div id="firstform-div" class="d-flex flex-row justify-content-around ">
+                <div class="form-group">
+                    <label for="nomproduit"> Le nom de produits</label>
+                    <input type="text" id="nomproduit" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="quantite">La quantité</label>
+                    <input type="text" id="quantite" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="price">Prix unitaire</label>
+                    <input type="text" id="price" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="tva">TVA</label>
+                    <select id="tva" name="tva" class="form-control">
+                        <option value="">--Please choose an option--</option>
+                        <option value="7">7%</option>
+                        <option value="10">10%</option>
+                        <option value="14">14%</option>
+                        <option value="20">20%</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="R1">Total</label>
+                    <p type="text" id="R1" class="form-control px-5">00.00</p>
+
+                </div>
+                <div class="invisible">
+                    <img id="del1" src="Design/delete.svg" alt="" width="20px">
+                </div>
+
+
+            </div>
+
+
+        </form>
+
+    </section>
+    <hr>
+    <div class="d-flex flex-row justify-content-around ">
+        <div>
+            <button id="adding" class="btn btn-primary ml-5 p-2 ">add new row</button>
+
+        </div>
+        <div class=" w-25 ml-auto">
+            <div class="d-flex flex-row justify-content-around align-items-center">
+                <h4>Total HT</h4>
+                <h4 class="border px-5 pt-2 pm-3 rounded" id=tHorst>00.00</h4>
+            </div>
+            <div class="d-flex flex-row justify-content-around align-items-center">
+                <h4> Tva </h4>
+                <h4 class="border px-5 pt-2 pm-3 rounded" id="tTva">00.00</h4>
+            </div>
+            <hr>
+            <div class="d-flex flex-row justify-content-around align-items-center">
+                <h4> Total (TTC)</h4>
+                <h4 class="border px-5 pt-2 pm-3 rounded" id="totalTtc">00.00</h4>
+
+            </div>
+        </div>
     </div>
-    <div class="factur">
-         <h5 class="fct">Facture: N°254320/06/2020</h5>
-    </div>
-    <div class="dony">
-        <div class="oto">
-            <label for="name" class="control-label">FULLNAME:</label>
-            <input type="text" name="name" class="form-control" id="name" >
-        </div>
-        <div class="oto2">
-            <label for="name" class="control-label1">Adress:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
-            <input type="text" name="name" class="form-control" id="name" >
-        </div>
-        <div class="oto2">
-            <label for="name" class="control-label2">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="text" name="name" class="form-control" id="name" >
-        </div>
-        <div class="oto2">
-            <label for="name" class="control-label3">Tel:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="text" name="name" class="form-control" id="name" > 
-        </div>
-    </div>
-    
+
+
+
+
+
+
+
+    <script src="Dev/Dist/js/script.js"></script>
+
+
 </body>
+
 </html>
