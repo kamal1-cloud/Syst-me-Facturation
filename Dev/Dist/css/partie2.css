@@ -3,51 +3,12 @@
     margin: 0px;
     font-family: 'Roboto', sans-serif;
 
-
-}
-
-body {
-    background-color: #E0E0F8;
-}
-
-.container{
-    background-color: white;
 }
 
 
 
 hr {
     width: 90%;
-    margin: 30px 10px;
-
-
-}
-
-nav.color {
-    background-color: #151756;
+    margin: auto;
 
 }
-
-nav.color a {
-    color: White;
-
-}
-button.color{
-    background-color: #151756;
-    color:white;
-}
-button:hover{
-    background-color: white;
-    color:#151756;
-   
-}
-
-.main {
-    background-color: white;
-}
-
-/* .personnal-form.form-group input {
-    border: none;
-    border-bottom: 2px solid red;
-
-} */

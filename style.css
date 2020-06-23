@@ -1,8 +1,4 @@
-.first-p{
-    padding: 30px;
-} 
- 
- .logo {
+.logo {
     height: 80px;
     width: 80px;
     border: 2px solid black;
@@ -15,23 +11,13 @@
     padding-bottom: 5px;
 }
 
-input[type=file] {
-    display: block;
-    z-index: 2;
-    position: absolute;
-    top: 56px;
-    right: -80px;
-    opacity: 0;
+.logo p {
+    color: rgb(52, 121, 231);
+    padding-top: 20px;
+    padding-left: -20px;
+    padding-right: 12px;
+    font-size: 15px;
 }
- .upload-photo {
-  
-    position: absolute;
-    right: 40px;
-    top: 10px;
-    width: 100px;
-    height: 100px;
-
- }
 
 a {
     text-decoration: none;
