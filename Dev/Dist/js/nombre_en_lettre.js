@@ -1,20 +1,25 @@
 // JavaScript Document
 /****************************************************************************
 *________________________________________________________________________	*
-*	About 		:	Convertit jusqu'à  999 999 999 999 999 (billion)		*
+*	About 		:	Convertit jusqu'ï¿½  999 999 999 999 999 (billion)		*
 *					avec respect des accords								*
 *_________________________________________________________________________	*			
 *	Auteur  	:	GALA OUSSE Brice, Engineer programmer of management		*
 *	Mail    	:	bricegala@yahoo.fr, bricegala@gmail.com					*
-*	Tél	    	:	+237 99 37 95 83 / +237 79 99 82 80						*
+*	Tï¿½l	    	:	+237 99 37 95 83 / +237 79 99 82 80						*
 *	Copyright 	:	avril  2007												*
 *_________________________________________________________________________	*
 *****************************************************************************
 */
+function keyUpHandler(obj){
+	document.getElementById("output").firstChild.nodeValue	=	NumberToLetter(obj.value)
+  }//fin de keypressHandler
+
+//::::::::::::::::::::
 function Unite( nombre ){
 	var unite;
 	switch( nombre ){
-		case 0: unite = "zéro";		break;
+		case 0: unite = "zï¿½ro";		break;
 		case 1: unite = "un";		break;
 		case 2: unite = "deux";		break;
 		case 3: unite = "trois"; 	break;
@@ -58,11 +63,11 @@ function NumberToLetter( nombre ){
 	var numberToLetter='';
 	//__________________________________
 	
-	if(  nombre.toString().replace( / /gi, "" ).length > 15  )	return "dépassement de capacité";
+	if(  nombre.toString().replace( / /gi, "" ).length > 15  )	return "dï¿½passement de capacitï¿½";
 	if(  isNaN(nombre.toString().replace( / /gi, "" ))  )		return "Nombre non valide";
 
 	nb = parseFloat(nombre.toString().replace( / /gi, "" ));
-	if(  Math.ceil(nb) != nb  )	return  "Nombre avec virgule non géré.";
+	if(  Math.ceil(nb) != nb  )	return  "Nombre avec virgule non gï¿½rï¿½.";
 	
 	n = nb.toString().length;
 	switch( n ){

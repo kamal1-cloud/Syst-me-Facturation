@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -23,13 +24,16 @@
 </head>
 
 <body>
+    <div id="paper">
+    <section class="first-p">
     <div class="logo">
-        <a href="">
-            <p>LOGO</p>
-        </a>
+        
+        <input class="logo-poi" type="file" onchange="previewFile()"><br>
+       <img src="" class="upload-photo" alt="">
     </div>
+    
     <div class="factur">
-        <h5 class="fct">Facture: N°254320/06/2020</h5>
+        <h5 class="fct">Facture: N°<span id="random"></span><span id="date"></span></h5>
     </div>
     <div class="dony">
         <div class="oto">
@@ -51,7 +55,7 @@
             <input type="text" name="name" class="form-control cont" id="name">
         </div>
     </div>
-
+</section>
 
     <section class="main" id="main">
 
@@ -119,12 +123,37 @@
             </div>
         </div>
     </div>
+            <!------------------ Section 3---------------  -->
 
+<section class="partie-3">
+
+  
+    <input name="montant" id="montant" type="text" size="25" onKeyUp=" keyUpHandler(this)">
+    
+    <p class="resultat">Arrêtée la présente facture à la somme de :</p>
+    <p class="output" id="output">&nbsp;</p>
+    <button class="print" id="print">Print</button>
+
+
+   </section>
+
+</div>
 
 
 
 
     <script src="Dev/Dist/js/script.js"></script>
+    <script src="Dev/Dist/js/index.js"></script>
+    <script src="Dev/Dist/js/nombre_en_lettre.js"></script>
+      <script src="Dev/Dist/js/printThis.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $('#print').click(function(){
+        $('#paper').printThis();
+    })
+    var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+    $.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
+  </script>
 
 </body>
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Dist/css/partie3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -47,7 +48,7 @@
                                     <!-- ------------------------------------------------  -Fin 2eme partie --------------------------------------------------------- -->
 
                                      <!-- ------------------------------------------------  -Debut 3eme partie --------------------------------------------------------- -->
-                                     
+                                     <section class="container1">
 
   
                                      <input name="montant" id="montant" type="text" size="25" onKeyUp=" keyUpHandler(this)">
@@ -57,7 +58,7 @@
                                      <button class="print" id="print">Print</button>
 
 
-
+                                    </section>
 
 
 
@@ -77,24 +78,18 @@
 
 
 
-
                                     
 <script src="./Dist/js/index.js"></script>
 <script src="./Dist/js/prestation.js"></script>
 <script src="./Dist/js/nombre_en_lettre.js"></script>
+<script src="./Dist/js/printThis.js"></script>
 
-<script>
-  function keyUpHandler(obj){
-      document.getElementById("output").firstChild.nodeValue	=	NumberToLetter(obj.value)
-    }//fin de keypressHandler
-</script>
 <script>
   $('#print').click(function(){
-      $('.container-paper').printThis();
+      $('#container-paper').printThis();
   })
   var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-$.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
+  $.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
 </script>
-
 </body>
 </html>
