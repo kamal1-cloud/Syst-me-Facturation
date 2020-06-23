@@ -10,8 +10,11 @@ body {
     background-color: #E0E0F8;
 }
 
+
 .container {
+    display: flow-root;
     background-color: white;
+    height: fit-content;
 }
 
 
