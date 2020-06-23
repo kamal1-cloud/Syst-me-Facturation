@@ -1,0 +1,21 @@
+#logo-poi{
+    position: relative;
+    left: 321px;
+    top: 20px;
+    /* opacity: 0; */
+}
+
+input[type=file] {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 56px;
+    right: -100px;
+    opacity: 0;
+}
+ .upload-photo {
+  
+    width: 90px;
+    height: 90px;
+
+ }

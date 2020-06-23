@@ -55,6 +55,7 @@ function updatePrice() {
         tHorsT.innerHTML = tHt;
         tTVA.innerHTML = tHt * (tva/100);
         tTTC.innerHTML=(tHt * (tva/100))+tHt;
+        var final = tTTC.value
         console.log(tTTC);
 
 

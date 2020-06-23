@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="Dev/Dist/css/partie2.css">
+    <link rel="stylesheet" href="Dev/Dist/css/partie1.css">
 
     <title>Facture</title>
 </head>
@@ -20,7 +21,9 @@
         </div>
         <div class=" ">
             <div class="d-flex flex-row justify-content-end">
-                <img class="border rounded p-4 mr-3" src="" alt="LOGO">
+                <input id="logo-poi" type="file" onchange="previewFile()"><br>
+                <img class="border rounded p-4 mr-3" class="upload-photo" src="" alt="LOGO">
+                
             </div>
             <div class="d-flex flex-row justify-content-center ">
                 <h3 class="border border-info rounded-pill p-2"> Facture: N°7565756/06/2020</h3>
@@ -122,19 +125,38 @@
                 <hr>
                 <div class="d-flex flex-row justify-content-around align-items-center">
                     <h4> Total (TTC)</h4>
-                    <h4 class="border px-5 pt-2 pm-3 rounded" id="totalTtc">00.00</h4>
+                    <!-- <h4 class="border px-5 pt-2 pm-3 rounded" onKeyUp=" keyUpHandler(this)"  id="totalTtc">00.00</h4> -->
+                    <input class="border pt-2 rounded"  onKeyUp=" keyUpHandler(this)" id="totalTtc"></input>
 
                 </div>
             </div>
         </div>
+        <section class="partie-3">
+
+            
+            <p class="resultat">Arrêtée la présente facture à la somme de :</p>
+            <p class="output" id="output">&nbsp;</p>
+            <button type="button" id="print" class="btn btn-primary float-right">Print</button>
+        
+        
+           </section>
+            
     </section>
-
-
-
-
+<!-- -----------------  section 3-------------------- -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $('#print').click(function(){
+        $(document.body).printThis();
+    })
+    var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+    $.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
+  </script>
 
     <script src="Dev/Dist/js/script.js"></script>
-
+    <script src="Dev/Dist/js/index.js"></script>
+    <script src="Dev/Dist/js/nombre_en_lettre.js"></script>
+      <script src="Dev/Dist/js/printThis.js"></script>
+     
 </body>
 
 </html>
